@@ -1,0 +1,56 @@
+export const level03 = {
+  id: 'level-03-valle',
+  name: 'El Valle de los Amigos Perdidos',
+  treasureId: 'cristal-amistad',
+  palette: {
+    sky: { top: '#2a2410', bottom: '#7a6a35' },
+    fog: '#5a7a3f',
+    accent: '#6a8a3f',
+  },
+  bounds: { width: 3200, height: 720 },
+  spawn: { x: 90, y: 500 },
+  platforms: [
+    { x: 0, y: 650, w: 700, h: 70 },
+    { x: 800, y: 590, w: 220, h: 30 },
+    { x: 1120, y: 650, w: 500, h: 70 },
+    { x: 1720, y: 580, w: 200, h: 30 },
+    { x: 2020, y: 650, w: 400, h: 70 },
+    { x: 2520, y: 600, w: 220, h: 30 },
+    { x: 2820, y: 650, w: 380, h: 70 },
+  ],
+  hazards: [],
+  npcs: [
+    {
+      x: 500,
+      y: 590,
+      kind: 'bird',
+      dialogue: ['Él entiende nuestros corazones.'],
+      triggerRadius: 90,
+    },
+    {
+      x: 1300,
+      y: 590,
+      kind: 'puppy',
+      dialogue: ['(un cachorro atrapado agradece en silencio)'],
+      triggerRadius: 90,
+    },
+    {
+      x: 2200,
+      y: 590,
+      kind: 'squirrel',
+      dialogue: ['(una ardilla herida se apoya en Simba)'],
+      triggerRadius: 90,
+    },
+  ],
+  collectible: { x: 3060, y: 590, treasureId: 'cristal-amistad', icon: 'crystal' },
+  spiritLine: 'Las palabras pueden unir personas... pero la amistad verdadera une corazones.',
+  background: {
+    layers: ['sky-gradient', 'hills-back', 'hills'],
+    particles: [
+      { type: 'pollen', density: 0.5 },
+      { type: 'fireflies', density: 0.2 },
+    ],
+    weather: null,
+  },
+  music: { ambientProfile: 'valley' },
+};

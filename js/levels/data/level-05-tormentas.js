@@ -1,0 +1,46 @@
+export const level05 = {
+  id: 'level-05-tormentas',
+  name: 'El Reino de las Tormentas',
+  treasureId: 'lagrima-cielo',
+  palette: {
+    sky: { top: '#0a0d16', bottom: '#2b3648' },
+    fog: '#1e2634',
+    accent: '#3a4658',
+  },
+  bounds: { width: 3600, height: 720 },
+  spawn: { x: 90, y: 500 },
+  platforms: [
+    { x: 0, y: 650, w: 500, h: 70 },
+    { x: 620, y: 580, w: 160, h: 30 },
+    { x: 880, y: 500, w: 160, h: 30 },
+    { x: 1140, y: 600, w: 200, h: 30 },
+    { x: 1440, y: 650, w: 300, h: 70 },
+    { x: 1840, y: 560, w: 160, h: 30 },
+    { x: 2100, y: 480, w: 160, h: 30 },
+    { x: 2360, y: 600, w: 200, h: 30 },
+    { x: 2660, y: 650, w: 940, h: 70 },
+  ],
+  hazards: [
+    { x: 700, y: 400, w: 30, h: 60, kind: 'lightning', range: 0, speed: 0 },
+    { x: 950, y: 380, w: 44, h: 44, kind: 'falling-rock', range: 80, speed: 60 },
+    { x: 1600, y: 400, w: 30, h: 60, kind: 'lightning', range: 0, speed: 0 },
+    { x: 2180, y: 360, w: 44, h: 44, kind: 'falling-rock', range: 90, speed: 55 },
+  ],
+  npcs: [
+    {
+      x: 1900,
+      y: 500,
+      kind: 'squirrel',
+      dialogue: ['(una criatura atrapada espera ser rescatada)'],
+      triggerRadius: 90,
+    },
+  ],
+  collectible: { x: 3440, y: 590, treasureId: 'lagrima-cielo', icon: 'tear' },
+  spiritLine: 'Las dificultades no muestran quién eres. Muestran quién decides ser.',
+  background: {
+    layers: ['sky-gradient', 'storm-skyline-back', 'storm-skyline'],
+    particles: [{ type: 'rain', density: 1.2 }],
+    weather: 'storm',
+  },
+  music: { ambientProfile: 'storm' },
+};

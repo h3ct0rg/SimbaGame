@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover" />
+  <title>El Silencio de Simba</title>
+  <link rel="stylesheet" href="css/reset.css" />
+  <link rel="stylesheet" href="css/theme.css" />
+  <link rel="stylesheet" href="css/layout.css" />
+  <link rel="stylesheet" href="css/ui.css" />
+  <link rel="stylesheet" href="css/mobile-controls.css" />
+</head>
+<body>
+  <div id="app">
+    <div id="viewport">
+      <canvas id="game-canvas" width="1280" height="720"></canvas>
+
+      <div id="loading-screen" class="ui-layer">
+        <div class="loading-title">El Silencio de Simba</div>
+        <div class="loading-bar"><div id="loading-bar-fill"></div></div>
+        <div id="loading-text">Cargando...</div>
+      </div>
+
+      <div id="menu-screen" class="ui-layer hidden">
+        <h1 class="menu-title">El Silencio de Simba</h1>
+        <p class="menu-subtitle">Una aventura sobre encontrar la voz del corazón</p>
+        <div class="menu-buttons">
+          <button id="btn-start" class="menu-button">Comenzar</button>
+          <button id="btn-continue" class="menu-button hidden">Continuar</button>
+        </div>
+      </div>
+
+      <div id="hud" class="ui-layer hidden">
+        <div id="hud-level-name"></div>
+      </div>
+
+      <div id="dialogue-box" class="ui-layer hidden">
+        <p id="dialogue-text"></p>
+      </div>
+
+      <button id="mute-button" class="ui-layer icon-button" aria-label="Silenciar sonido">🔊</button>
+      <button id="skip-button" class="ui-layer hidden">Saltar »</button>
+
+      <div id="mobile-controls" class="ui-layer">
+        <div id="joystick-zone">
+          <div id="joystick-base"><div id="joystick-thumb"></div></div>
+        </div>
+        <button id="jump-button" aria-label="Saltar">⤒</button>
+      </div>
+    </div>
+  </div>
+
+  <script type="module" src="js/main.js"></script>
+</body>
+</html>

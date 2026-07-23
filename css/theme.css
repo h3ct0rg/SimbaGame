@@ -1,0 +1,11 @@
+:root {
+  --color-bg: #05070a;
+  --color-ink: #f5e6c8;
+  --color-ink-soft: rgba(245, 230, 200, 0.85);
+  --color-accent: #e8c56a;
+  --color-panel: rgba(10, 12, 18, 0.72);
+  --color-panel-border: rgba(232, 197, 106, 0.35);
+  --shadow-glow: 0 0 24px rgba(232, 197, 106, 0.35);
+  --font-display: Georgia, 'Times New Roman', serif;
+  --font-ui: 'Segoe UI', Arial, sans-serif;
+}

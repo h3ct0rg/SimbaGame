@@ -1,0 +1,37 @@
+export const level02 = {
+  id: 'level-02-montana',
+  name: 'La Montaña de los Ecos Perdidos',
+  treasureId: 'piedra-valor',
+  palette: {
+    sky: { top: '#0c1420', bottom: '#3a4b5e' },
+    fog: '#4a5568',
+    accent: '#2c3a52',
+  },
+  bounds: { width: 3600, height: 720 },
+  spawn: { x: 90, y: 500 },
+  platforms: [
+    { x: 0, y: 650, w: 500, h: 70 },
+    { x: 600, y: 580, w: 180, h: 30 },
+    { x: 880, y: 520, w: 160, h: 30 },
+    { x: 1140, y: 600, w: 220, h: 30 },
+    { x: 1460, y: 650, w: 400, h: 70 },
+    { x: 1980, y: 560, w: 180, h: 30 },
+    { x: 2260, y: 480, w: 160, h: 30 },
+    { x: 2520, y: 600, w: 220, h: 30 },
+    { x: 2840, y: 650, w: 700, h: 70 },
+  ],
+  hazards: [
+    { x: 760, y: 460, w: 46, h: 46, kind: 'shadow', range: 90, speed: 40 },
+    { x: 1650, y: 500, w: 46, h: 46, kind: 'shadow', range: 120, speed: 50 },
+    { x: 2380, y: 380, w: 46, h: 46, kind: 'shadow', range: 100, speed: 45 },
+  ],
+  npcs: [],
+  collectible: { x: 3400, y: 590, treasureId: 'piedra-valor', icon: 'stone' },
+  spiritLine: 'El valor no es no sentir miedo. El valor es seguir adelante cuando el miedo aparece.',
+  background: {
+    layers: ['sky-gradient', 'clouds', 'far-mountains-back', 'far-mountains'],
+    particles: [{ type: 'fog', density: 0.6 }],
+    weather: null,
+  },
+  music: { ambientProfile: 'mountain' },
+};

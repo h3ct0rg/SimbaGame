@@ -1,0 +1,35 @@
+export const level06 = {
+  id: 'level-06-espejos',
+  name: 'La Ciudad de los Espejos',
+  treasureId: 'espejo-alma',
+  palette: {
+    sky: { top: '#14162a', bottom: '#4a4a70' },
+    fog: '#8a8ac0',
+    accent: '#6a6aa0',
+  },
+  bounds: { width: 3400, height: 720 },
+  spawn: { x: 90, y: 500 },
+  platforms: [
+    { x: 0, y: 650, w: 700, h: 70 },
+    { x: 800, y: 590, w: 200, h: 30 },
+    { x: 1100, y: 650, w: 500, h: 70 },
+    { x: 1700, y: 570, w: 200, h: 30 },
+    { x: 2000, y: 650, w: 400, h: 70 },
+    { x: 2500, y: 590, w: 200, h: 30 },
+    { x: 2800, y: 650, w: 600, h: 70 },
+  ],
+  hazards: [
+    { x: 900, y: 500, w: 50, h: 90, kind: 'mirror-shard', range: 0, speed: 0 },
+    { x: 1850, y: 480, w: 50, h: 90, kind: 'mirror-shard', range: 0, speed: 0 },
+    { x: 2650, y: 500, w: 50, h: 90, kind: 'mirror-shard', range: 0, speed: 0 },
+  ],
+  npcs: [],
+  collectible: { x: 3240, y: 590, treasureId: 'espejo-alma', icon: 'mirror' },
+  spiritLine: 'No eres aquello que falta. Eres todo aquello que existe dentro de ti.',
+  background: {
+    layers: ['sky-gradient', 'mirror-panels-back', 'mirror-panels', 'water-reflection'],
+    particles: [{ type: 'sparkles', density: 0.5 }],
+    weather: null,
+  },
+  music: { ambientProfile: 'mirrors' },
+};
